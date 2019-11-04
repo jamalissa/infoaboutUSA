@@ -1,0 +1,252 @@
+* {
+    font-family: 'Asap', sans-serif; /* Link kopieren von der google seite */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* mit color picker suchen */
+body {
+    background-color: Silver;
+    /* Für Bild im Hintergrund: background-image: url(../Bilder.jpg), für Größe background-size*/
+
+}
+
+/* mit Inhaltsbereich */
+
+main {
+    padding: 20px;
+    background-color: #FFF;
+}
+
+header{
+    padding:20px;
+}
+footer {
+    background-color: #333;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 10px
+}
+
+header nav ul li ul li{
+    display: none;
+}
+
+h1
+{
+    font-size: 24px;
+    color: Blue;
+    text-transform: uppercase;
+}
+
+h2
+{
+    font-size: 20px;
+}
+
+h3
+ {
+     font-size: 18px;
+ }
+
+h1, h2, h3, p{
+    padding-bottom: 10px;
+}
+h1, h2, h3{
+    padding-top: 20px;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child {
+    padding-top: 0;
+}
+header a {
+    color: Maroon;
+    text-decoration: none;
+}
+
+main ul,
+main ol {
+    margin-left: 20px;
+    margin-bottom: 30px;
+
+}
+/* Tabelle */
+
+table {
+    margin-bottom: 30px;
+    border: 2px solid #FF0000;
+}
+
+th {
+    text-align: left;
+    background-color: antiquewhite;
+}
+
+tr:nth-child(odd) {
+    background-color: aquamarine;
+}
+/* Video */
+
+.videoWrapper {
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 56.25%;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+/* Teaser */
+
+.teaser {
+    padding: 20px;
+    background-color: Olive;
+    margin-bottom: 30px;
+}
+/* Seitenspalte */
+
+aside {
+    border-top: 1px solid #000;
+    margin-top: 0px;
+    padding: 20px;
+}
+footer {
+    padding: 20px;
+}
+footer form {
+    padding: 20px;
+    background-color: red;
+}
+footer textarea,
+footer input {
+    width: 100%;
+}
+footer textarea {
+    height: 50px;
+}
+footer input[type="button"] {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+footer div:nth-child(2) {
+    border-top: 1px solid #000;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+/* Desktop-Version */
+
+@media screen and (min-width: 1000px) {
+    /* body {
+        color: red;
+    } */
+    #page {
+        max-width: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px 0 #DDD;
+    }
+    header a:hover {
+        color: red;
+    }
+    header ul li {
+        position: relative;
+        padding: 10px 50px;
+    }
+    header > nav > ul > li:first-child {
+        padding-left: 0;
+    }
+    /* zeige Unternavigation an */
+    header nav ul li:hover ul li {
+        display: block;
+
+    }
+    header ul li ul {
+        position: absolute;
+        background-color: white;
+    }
+    /* Inhalt und Seitenspalte */
+    main > div {
+        float: left;
+        width: 70%;
+        background-color: white;
+    }
+    main > aside {
+        float: right;
+        width: 25%;
+        border-top: 0 none;
+        margin-top: 0;
+        background-color: #AAA;
+    }
+    .clear {
+        clear: both;
+    }
+
+    /* Gallery */
+    .gallery {
+        padding: 20px;
+    background-color: #FFF;
+    }
+    .gallery a {
+        float: left;
+        width: 30%;
+        margin-left: 5%;
+    }
+    .gallery a:first-child {
+        margin-left: 0;
+    }
+    .gallery img {
+        width: 100%;
+    }
+
+    /* Teaser */
+    .teaser {
+        float: left;
+        width: 47.5%;
+        margin-left: 5%;
+    }
+    .teaser:first-child {
+        margin-left: 0;
+    }
+
+    /* Footer */
+    footer > div {
+        float: left;
+        width: 47.5%;
+        margin-left: 5%;
+    }
+    footer > div:first-child {
+        margin-left: 0;
+    }
+    footer div:nth-child(2) {
+        border-top: 0 none;
+        margin-top: 0;
+        padding-top: 35px;
+    }
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    .socialMedia:hover {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+}
